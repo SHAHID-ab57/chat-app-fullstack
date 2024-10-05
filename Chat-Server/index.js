@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());  // Replaces body-parser for JSON
 app.use(cookieParser());  // Parse cookies
 
-const __dirname = path.resolve(); // Correctly resolving the __dirname
+
 
 // Routes
 app.get('/', (req, res) => {
