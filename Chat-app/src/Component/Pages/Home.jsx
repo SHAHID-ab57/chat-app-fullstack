@@ -43,7 +43,7 @@ dispatch(FetchUserDetails())
 
 
   useEffect(()=>{
-const socketConnection = io("https://chat-app-server-7uix.onrender.com",{
+const socketConnection = io(import.meta.env.VITE_BACKEND_PATH_URL,{
   auth:{
     token:window.localStorage.getItem("token"),
   }
