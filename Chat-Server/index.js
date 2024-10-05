@@ -9,7 +9,6 @@ const router = require("./Config/routes/index");
 const { app, httpServer } = require("./Config/Socket/socket");
 
 // Middleware setup
-
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   credentials: true,
@@ -18,7 +17,7 @@ app.use(cors({
 app.use(express.json());  // Replaces body-parser for JSON
 app.use(cookieParser());  // Parse cookies
 
-const __dirname = path.resolve()
+const __dirname = path.resolve(); // Correctly resolving the __dirname
 
 // Routes
 app.get('/', (req, res) => {
@@ -31,11 +30,14 @@ app.get('/', (req, res) => {
 
 app.use('/api', router);
 
-app.use(express.static(path.join(__dirname,"/Chat-app/dist")))
+// Serve static files from the "dist" folder (frontend build)
+app.use(express.static(path.join(__dirname, '/Chat-app/dist')));
 
+// Catch-all route to serve index.html for any unmatched routes (for React Router)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname,"Chat-app", 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '/Chat-app/dist', 'index.html'));
 });
+
 // Connect to database and start the server
 const PORT = process.env.PORT || 8080;
 
