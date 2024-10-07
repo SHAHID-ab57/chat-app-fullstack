@@ -120,7 +120,7 @@ const MessagePage = () => {
           {allMessage?.map((msg, index) => (
             <div
               key={index}
-              className={`p-2 rounded-lg w-fit max-w-[80%] ${userDetails._id === msg.msgbyID ? "ml-auto bg-teal-200" : "bg-white"}`}
+              className={`p-2 rounded-lg w-fit max-w-[80%] ${userDetails?._id === msg.msgbyID ? "ml-auto bg-teal-200" : "bg-white"}`}
             >
               {msg?.imageUrl && <img src={msg.imageUrl} alt="Uploaded" className="w-full h-48 object-contain" />}
               {msg?.videoUrl && (

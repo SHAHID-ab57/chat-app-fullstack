@@ -22,7 +22,7 @@ const Editdetails = ({ onClose }) => {
     dispatch(FetchUserDetails())
      },[dispatch])
 
-     console.log("userDetails", userDetails)
+     
 
   const handleOnchange = (e) => {
     setCollectData({ ...collectData, [e.target.name]: e.target.value });

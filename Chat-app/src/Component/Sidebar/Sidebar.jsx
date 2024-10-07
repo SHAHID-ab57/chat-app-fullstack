@@ -23,6 +23,7 @@ const Sidebar = () => {
   const [allUsers, setAllUsers] = useState([]);
   const [openSearchUsers, setOpenSearchUsers] = useState(false);
 
+  console.log("userDetails",userDetails)
   useEffect(()=>{
  dispatch(FetchUserDetails())
   },[dispatch])
