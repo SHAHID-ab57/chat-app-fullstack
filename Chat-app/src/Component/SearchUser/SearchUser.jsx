@@ -18,7 +18,7 @@ const SearchUser = ({ onClose }) => {
     dispatch(SearchApi(search))
       .then((res) => {
         setSearchUser(res.payload.data);
-        console.log("Search Res", res.payload.data);
+        // console.log("Search Res", res.payload.data);
       })
       .catch((err) => {
         throw err;
@@ -31,7 +31,7 @@ const SearchUser = ({ onClose }) => {
     searchUserHandler();
   }, [search]);
 
-  console.log("Search Array", searchUser);
+  // console.log("Search Array", searchUser);
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20 p-2">

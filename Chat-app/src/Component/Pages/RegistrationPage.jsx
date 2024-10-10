@@ -48,9 +48,9 @@ const RegistrationPage = () => {
             password: "",
             profile_picture: "",
           });
-          setTimeout(() => {
+          setUploadPhoto("");
             navigate("/emailcheck");
-          }, 1000);
+          
         } else {
           toast.error(res.payload.message);
         }

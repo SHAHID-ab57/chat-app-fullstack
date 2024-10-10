@@ -34,7 +34,7 @@ const Editdetails = ({ onClose }) => {
     let photo = (e.target.files[0]);
     const uploadPhoto = await uploadFile(photo)
 
-    console.log("UploadPhoto", uploadPhoto);
+    // console.log("UploadPhoto", uploadPhoto);
     setCollectData({...collectData, profile_picture:uploadPhoto?.url})
 
   }
@@ -47,7 +47,7 @@ const Editdetails = ({ onClose }) => {
     e.stopPropagation();
     console.log(collectData);
     dispatch(UpdateUserDetails(collectData)).then(res=>{
-    console.log(res);
+    // console.log(res);
     if(res.payload.success){
       onClose()
       toast.success(res.payload.message);

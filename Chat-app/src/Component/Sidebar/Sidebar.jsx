@@ -23,7 +23,7 @@ const Sidebar = () => {
   const [allUsers, setAllUsers] = useState([]);
   const [openSearchUsers, setOpenSearchUsers] = useState(false);
 
-  console.log("userDetails",userDetails)
+  // console.log("userDetails",userDetails)
   useEffect(()=>{
  dispatch(FetchUserDetails())
   },[dispatch])
@@ -47,7 +47,7 @@ const Sidebar = () => {
   }, [socketConnection, userDetails]);
 
   const logoutHandler = () => {
-    localStorage.removeItem("token");
+    window.localStorage.removeItem("token");
     dispatch(LogoutAuth())
       .then(() => {
         navigate("/emailcheck");

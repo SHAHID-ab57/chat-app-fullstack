@@ -29,7 +29,7 @@ const cookieOptions = {
     secure : true
 }
 
- return res.cookie("token",token,cookieOptions).status(200).json({
+ return res.status(200).json({
        message:"Login Successfully",
        data: user ,
        token: token,

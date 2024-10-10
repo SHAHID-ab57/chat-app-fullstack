@@ -8,7 +8,7 @@ import { ForgotEmailAuth, ResetPasswordAuth } from "../../Redux/Slice/AuthSlice"
 const ForgotPassword = () => {
   const dispatch = useDispatch();
   const {emailInfo} = useSelector((state)=> state.AuthStore)
-  console.log("Forgot Password page", emailInfo)
+  // console.log("Forgot Password page", emailInfo)
 
   // Step 1: Enter email
   const [email, setEmail] = useState("");

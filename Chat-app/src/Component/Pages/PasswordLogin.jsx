@@ -27,7 +27,7 @@ const PasswordLogin = () => {
 
     await dispatch(PasswordAuth(passdata))
       ?.then((res) => {
-        console.log("Response in payload", res.payload.token);
+        // console.log("Response in payload", res.payload.token);
         window.localStorage.setItem("token", res.payload.token);
 
         if (res.payload.success) {

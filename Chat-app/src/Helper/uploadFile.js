@@ -1,7 +1,7 @@
 // Accessing the environment variable
 const url = `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/auto/upload`;
 
-console.log("import.meta.env.VITE_CLOUDINARY_CLOUD_NAME",import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
+// console.log("import.meta.env.VITE_CLOUDINARY_CLOUD_NAME",import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
 
 
 export const uploadFile = async (file) => {
