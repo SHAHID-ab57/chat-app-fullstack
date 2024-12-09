@@ -2,7 +2,7 @@ const getUserDetailsFromToken = require("../Helper/getUserDetailsFromToken")
 const UserModel = require("../Models/UserModel")
 async function updateUserDetails(req,res){
 try {
-    const token = req.cookies.token || ""
+    const token =  req.headers['x-access-token'] || ""
 
     const user = await getUserDetailsFromToken(token)
 
